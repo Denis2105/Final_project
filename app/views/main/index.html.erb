@@ -11,10 +11,10 @@
 
       <div class="nav-bar-buttons">
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>PowerUp</li>
         </ul>
       </div>
 
@@ -22,7 +22,7 @@
 
     <div class="search-bar">
       <form action="">
-        <!-- Authenticity Token -->
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
         <input type="text" name="search" value="">
         <button>Bargain me up</button>
       </form>
@@ -37,15 +37,15 @@
     <div class="benefits">
 
       <div class="benefit" id="benefit1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet adipisci dolore, nulla, nihil iusto unde temporibus officiis sit a cum quo consequatur nobis, omnis ab corporis! Quis ab, esse corporis.</p>
+        <p>Lorem ipsum dolor sit amet</p>
       </div>
 
       <div class="benefit" id="benefit2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio placeat hic quis sint consequatur possimus, vero dicta, sit nemo. Possimus repellat ducimus tempore quod culpa. Minus incidunt magni velit?</p>
+        <p>Lorem ipsum dolor sit amet</p>
       </div>
 
       <div class="benefit" id="benefit3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consectetur dolores laboriosam a sapiente obcaecati dolorum facilis, adipisci dolore placeat at ad quos libero quaerat temporibus quidem eius officia quibusdam!</p>
+        <p>Lorem ipsum dolor sit amet</p>
       </div>
 
     </div>
@@ -61,7 +61,7 @@
 
     <div class="bargains">
 
-      <div class="bargain">
+      <div class="bargain" id="bargain1">
         <div class="bargain-image_holder">
           <img src="" alt="">
         </div>
@@ -69,11 +69,32 @@
           <h2>Lorem ipsum dolor</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi quasi nesciunt, enim aliquam cupiditate explicabo. Eveniet excepturi, adipisci rerum debitis quis veniam unde possimus ipsam nisi cumque assumenda fugiat!</p>
         </div>
-
-
       </div>
 
+      <div class="bargain" id="bargain2">
+        <div class="bargain-image_holder">
+          <img src="" alt="">
+        </div>
+        <div class="bargin_content">
+          <h2>Lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi quasi nesciunt, enim aliquam cupiditate explicabo. Eveniet excepturi, adipisci rerum debitis quis veniam unde possimus ipsam nisi cumque assumenda fugiat!</p>
+        </div>
+      </div>
+
+      <div class="bargain" id="bargain3">
+        <div class="bargain-image_holder">
+          <img src="" alt="">
+        </div>
+        <div class="bargin_content">
+          <h2>Lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi quasi nesciunt, enim aliquam cupiditate explicabo. Eveniet excepturi, adipisci rerum debitis quis veniam unde possimus ipsam nisi cumque assumenda fugiat!</p>
+        </div>
+      </div>
+
+
     </div>
+
+  </div>
 
 
   </div>
