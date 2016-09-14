@@ -1,7 +1,7 @@
 
 <header>
 
-    <nav>
+    <!-- <nav>
 
       <div class="logo-holder">
         <a href="">
@@ -18,37 +18,63 @@
         </ul>
       </div>
 
-    </nav>
+    </nav> -->
 
-    <div class="search-bar">
-      <form action="">
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <input type="text" name="search" value="">
-        <button>Bargain me up</button>
-      </form>
+    <div class="landing-view">
+
+      <div class="logo">
+        <img src="/images/logo.png" alt="">
+      </div>
+      <div class="search-bar">
+        <form action="/results" method="get" >
+          <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+          <input type="text" name="search" value="" placeholder="Search deals by keyword ( e.g. free, iPhone7 )">
+          <button>Search</button>
+        </form>
+      </div>
+
     </div>
+
+    <div class="benefits_holder">
+      <div class="benefits">
+
+        <div class="benefit_container">
+          <div class="benefit_logo">
+            <img src="/images/benefit_logo1.png" alt="">
+          </div>
+
+          <div class="benefit" id="benefit1">
+            <p>Best deals guaranteed, backed by thrifty</p>
+          </div>
+        </div>
+
+        <div class="benefit_container">
+          <div class="benefit_logo">
+            <img src="/images/benefit_logo2.png" id="benefit_logo2" alt="">
+          </div>
+          <div class="benefit" id="benefit2">
+            <p>Filter by frees, popularity and category</p>
+          </div>
+        </div>
+
+        <div class="benefit_container">
+          <div class="benefit_logo">
+            <img src="/images/benefit_logo3.png" alt="">
+          </div>
+          <div class="benefit" id="benefit3">
+            <p>Never, ever, pay retail price again</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
 
 </header>
 
 <section class="product-offers">
 
   <div class="container">
-
-    <div class="benefits">
-
-      <div class="benefit" id="benefit1">
-        <p>Lorem ipsum dolor sit amet</p>
-      </div>
-
-      <div class="benefit" id="benefit2">
-        <p>Lorem ipsum dolor sit amet</p>
-      </div>
-
-      <div class="benefit" id="benefit3">
-        <p>Lorem ipsum dolor sit amet</p>
-      </div>
-
-    </div>
 
 
   </div>
@@ -61,12 +87,29 @@
 
     <div class="bargains">
 
-      <div class="bargain" id="bargain1">
+      <% @bargains.take(9).each do |bargain| %>
+        <div class="bargain">
+
+          <a href="<%= bargain.bargain_url %>">
+            <div class="bargain-image_holder">
+              <img src="<%= bargain.image_url %>" alt="">
+            </div>
+
+            <div class="bargin_content">
+              <h2><%= bargain.title %></h2>
+              <p><%= bargain.description %></p>
+            </div>
+          </a>
+
+        </div>
+      <% end %>
+
+      <!-- <div class="bargain" id="bargain1">
         <div class="bargain-image_holder">
           <img src="" alt="">
         </div>
         <div class="bargin_content">
-          <h2>Lorem ipsum dolor</h2>
+          <h2>  <%= @bargain.title %></h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi quasi nesciunt, enim aliquam cupiditate explicabo. Eveniet excepturi, adipisci rerum debitis quis veniam unde possimus ipsam nisi cumque assumenda fugiat!</p>
         </div>
       </div>
@@ -89,7 +132,7 @@
           <h2>Lorem ipsum dolor</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi quasi nesciunt, enim aliquam cupiditate explicabo. Eveniet excepturi, adipisci rerum debitis quis veniam unde possimus ipsam nisi cumque assumenda fugiat!</p>
         </div>
-      </div>
+      </div> -->
 
 
     </div>
