@@ -1,2 +1,25 @@
-<h1>hi</h1>
+<h1>Search results</h1>
 <h2> <%= @search %> </h2>
+
+<div class="container">
+  <div class="bargains">
+
+    <% @bargain_results.each do |bargain| %>
+      <div class="bargain">
+
+        <div class="bargain_content">
+
+          <h2><%= bargain.title %></h2>
+          <p><%= bargain.description %></p>
+
+        </div>
+
+        <div class="bargain-image_holder">
+          <img src="<%= bargain.image_url %>" alt="">
+        </div>
+
+      </div>
+    <% end %>
+
+  </div>
+</div>

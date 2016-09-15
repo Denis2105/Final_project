@@ -1,25 +1,6 @@
 
 <header>
 
-    <!-- <nav>
-
-      <div class="logo-holder">
-        <a href="">
-          <img src="" alt="">
-        </a>
-      </div>
-
-      <div class="nav-bar-buttons">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>PowerUp</li>
-        </ul>
-      </div>
-
-    </nav> -->
-
     <div class="landing-view">
 
       <div class="logo">
@@ -44,7 +25,7 @@
           </div>
 
           <div class="benefit" id="benefit1">
-            <p>Best deals guaranteed, backed by thrifty</p>
+            <p>Best deals guaranteed, backed by the thrifty</p>
           </div>
         </div>
 
@@ -69,17 +50,13 @@
       </div>
     </div>
 
-
 </header>
 
-<section class="product-offers">
+<!-- <section class="filter-bar">
 
-  <div class="container">
+  <h1>Filter By</h1>
 
-
-  </div>
-
-</section>
+</section> -->
 
 <section class="bargain-section">
 
@@ -87,58 +64,25 @@
 
     <div class="bargains">
 
-      <% @bargains.take(9).each do |bargain| %>
+      <% @bargains.take(12).each do |bargain| %>
         <div class="bargain">
 
           <a href="<%= bargain.bargain_url %>">
-            <div class="bargain-image_holder">
-              <img src="<%= bargain.image_url %>" alt="">
-            </div>
 
-            <div class="bargin_content">
+            <div class="bargain_content">
               <h2><%= bargain.title %></h2>
               <p><%= bargain.description %></p>
+            </div>
+
+            <div class="bargain-image_holder">
+              <img src="<%= bargain.image_url %>" alt="">
             </div>
           </a>
 
         </div>
       <% end %>
 
-      <!-- <div class="bargain" id="bargain1">
-        <div class="bargain-image_holder">
-          <img src="" alt="">
-        </div>
-        <div class="bargin_content">
-          <h2>  <%= @bargain.title %></h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi quasi nesciunt, enim aliquam cupiditate explicabo. Eveniet excepturi, adipisci rerum debitis quis veniam unde possimus ipsam nisi cumque assumenda fugiat!</p>
-        </div>
-      </div>
-
-      <div class="bargain" id="bargain2">
-        <div class="bargain-image_holder">
-          <img src="" alt="">
-        </div>
-        <div class="bargin_content">
-          <h2>Lorem ipsum dolor</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi quasi nesciunt, enim aliquam cupiditate explicabo. Eveniet excepturi, adipisci rerum debitis quis veniam unde possimus ipsam nisi cumque assumenda fugiat!</p>
-        </div>
-      </div>
-
-      <div class="bargain" id="bargain3">
-        <div class="bargain-image_holder">
-          <img src="" alt="">
-        </div>
-        <div class="bargin_content">
-          <h2>Lorem ipsum dolor</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sequi quasi nesciunt, enim aliquam cupiditate explicabo. Eveniet excepturi, adipisci rerum debitis quis veniam unde possimus ipsam nisi cumque assumenda fugiat!</p>
-        </div>
-      </div> -->
-
-
     </div>
-
-  </div>
-
 
   </div>
 
