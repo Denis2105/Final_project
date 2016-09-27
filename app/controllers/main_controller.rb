@@ -10,7 +10,6 @@ class MainController < ApplicationController
 
     Bargain.destroy_all
 
-
     page_number = 1
 
     loop do
@@ -40,16 +39,16 @@ class MainController < ApplicationController
 
       end
 
+      # goes to the next page after the first loop ends and so forth
       page_number += 1
+      # bot looks for the next page number in a text
       next_link = page.links_with(:text => page_number.to_s)[0]
-
       # need a way out of the loop
       break if next_link == nil
-
+      # bot clicks on the next_link after sucessfully searching for it
       body = next_link.click
 
     end
-    # end
 
     @bargains = Bargain.all
     # puts title
@@ -71,34 +70,3 @@ class MainController < ApplicationController
   end
 
 end
-
-
-
-#
-# while page_num < 9
-#
-#   # scrape current page
-#   # save to db
-#   results_bargains = next_page_link.click
-#   listing_container_menulog = results_menulog.css('#searchResultBlock')
-#   listing_menulog = listing_container_menulog.css('.content')
-#   # page_num += 1
-#   # clicks on next page
-#
-# end
-
-
-
-
-#   next_page_link = results_menulog.link_with(:text => 'NEXT ')
-#
-#   if next_page_link
-#     next_page = true
-#     results_menulog = next_page_link.click
-#     listing_container_menulog = results_menulog.css('#searchResultBlock')
-#     listing_menulog = listing_container_menulog.css('.content')
-#   else
-#     next_page = false
-#   end
-#
-# end until next_page == false

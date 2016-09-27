@@ -6,6 +6,11 @@ h2 {
   font-family: 'Metrophobic', sans-serif;
 }
 
+h1 {
+  padding-left: 15px;
+  font-family: 'Pacifico', cursive;
+}
+
 p {
   font-family: 'Roboto', sans-serif;
 }
@@ -21,7 +26,7 @@ html {
 }
 
 body {
-  /*background-color: red;*/
+  background-color: #1D1D1D;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -33,13 +38,13 @@ a {
 }
 
 .container {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
   background-color: white;
 }
 
 .bargain-section {
-  background-color: black;
+  background-color: #dedede;
 }
 
 /*//////Hero section//////*/
@@ -51,10 +56,10 @@ header {
   justify-content: center;
   background-color: #000000;
   position: relative;
-  background: -webkit-radial-gradient(#252424, #000000); /* Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(#373737, #000000); /* For Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(#373737, #000000); /* For Firefox 3.6 to 15 */
-  background: radial-gradient(#373737, #000000); /* Standard syntax */
+  background: -webkit-radial-gradient(#262626, #000000); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#262626, #000000); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#262626, #000000); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#262626, #000000); /* Standard syntax */
 }
 
 .landing-view {
@@ -126,19 +131,49 @@ input:focus {
   padding-right: 35px;
 }
 
-/*///Filter bar section///*/
+/*///Results search-bar section///*/
 
-/*.filter-bar {
-  background-color: rgb(61, 61, 61);
-  height: 50px;
-  width: 100%;
+.results-search-bar {
+  text-align: center;
+  padding-bottom: 50px;
 }
 
-.filter-bar h1 {
-  margin-top: 0;
-  text-align: center;
-}*/
+.results-search-bar input {
+  height: 50px;
+  width: 30%;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 3px;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
+.results-search-bar button {
+  height: 50px;
+  background-color: #c70202;
+  border: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 0px;
+  color: white;
+  margin-left: -5px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.results-page-logo{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 50px;
+}
+
+.results-page-logo img {
+  width: 50px;
+}
 
 /*//////Benefits section//////*/
 
@@ -152,17 +187,17 @@ input:focus {
   left: 0;
   width: 100%;
   text-align: center;
-
 }
 
 .benefits {
   width: 700px;
   /*margin-bottom: 50px;*/
   /*height: 100px;*/
-  color: rgb(61, 61, 61);
+  color: rgb(77, 75, 75);
   text-align: center;
   margin: 0 auto;
   font-size: 0.9em;
+  font-weight: bold;
 }
 
 .benefit_container {
@@ -177,10 +212,28 @@ input:focus {
 
 /*//////Bargains section//////*/
 
-
 .bargains {
   display: flex;
   flex-wrap: wrap;
+  overflow: none;
+}
+
+.bargains h2 {
+  width: 100%;
+}
+
+#home-text {
+  text-align: center;
+  padding: 30px 0px 20px 0px;
+  margin: 0px;
+  font-size: 3.0em;
+  font-family: 'Pacifico', cursive;
+  background-color: #dedede;
+  color: #c70202;
+  /*background: -webkit-radial-gradient(#615e5e, #333333); /* Safari 5.1 to 6.0 */*/
+  /*background: -o-radial-gradient(#615e5e, #333333); /* For Opera 11.6 to 12.0 */*/
+  /*background: -moz-radial-gradient(#615e5e, #333333); /* For Firefox 3.6 to 15 */*/
+  /*background: radial-gradient(#615e5e, #333333); /* Standard syntax */*/
 }
 
 .bargain {
@@ -219,28 +272,48 @@ input:focus {
   text-decoration: none;
   text-shadow: rgba(0, 0, 0, 0.00392157) 1px 1px 1px;
   vertical-align: baseline;
-  width: 33.333333%;
+  width: 50%;
   -webkit-font-smoothing: antialiased;
 }
 
 .bargain h2 {
   margin-top: 0;
   line-height: 1.2em;
+  font-size: 1.2em;
+  color: #c70202;
+}
+
+.bargain p {
+  font-size: 1em;
+  word-wrap: break-word;
 }
 
 .bargain:hover .bargain_content{
-  color: rgb(75, 75, 75);
+  color: #235789;
   cursor: pointer;
 }
 
 .bargain_content {
   color: black;
-  margin-bottom: 35px;
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .bargain-image_holder {
-  text-align: center;
+  text-align: left;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+
 }
+
+.bargain-image_holder img {
+  max-width:100%;
+  max-height:100%;
+}
+/*max width max height holds all image in proportion*/
 
 /*///footer///*/
 
@@ -260,4 +333,5 @@ footer .container {
   margin: 0;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
 }

@@ -1,4 +1,18 @@
-<h1>Search results</h1>
+<div class="results-page-logo">
+  <a href="/">
+    <img src="/images/favicon copy.png" alt="">
+  </a>
+</div>
+
+<div class="results-search-bar">
+  <form action="/results" method="get" >
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <input type="text" name="search" placeholder="Search other deals" value="<%= params[:search] %>">
+    <button>Search</button>
+  </form>
+</div>
+
+<!-- <h1>Search results</h1> -->
 <h2> <%= @search %> </h2>
 
 <div class="container">
@@ -7,16 +21,18 @@
     <% @bargain_results.each do |bargain| %>
       <div class="bargain">
 
-        <div class="bargain_content">
+        <a href="<%= bargain.bargain_url %>">
 
-          <h2><%= bargain.title %></h2>
-          <p><%= bargain.description %></p>
+          <div class="bargain-image_holder">
+            <img src="<%= bargain.image_url %>" alt="">
+          </div>
 
-        </div>
+          <div class="bargain_content">
+            <h2><%= bargain.title %></h2>
+            <p><%= bargain.description %></p>
+          </div>
 
-        <div class="bargain-image_holder">
-          <img src="<%= bargain.image_url %>" alt="">
-        </div>
+        </a>
 
       </div>
     <% end %>

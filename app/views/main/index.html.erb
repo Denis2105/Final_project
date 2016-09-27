@@ -64,19 +64,22 @@
 
     <div class="bargains">
 
-      <% @bargains.take(12).each do |bargain| %>
+      <h2 id="home-text">Recent Deals</h2>
+
+      <% @bargains.take(8).each do |bargain| %>
         <div class="bargain">
 
           <a href="<%= bargain.bargain_url %>">
+
+            <div class="bargain-image_holder">
+              <img src="<%= bargain.image_url %>" alt="">
+            </div>
 
             <div class="bargain_content">
               <h2><%= bargain.title %></h2>
               <p><%= bargain.description %></p>
             </div>
 
-            <div class="bargain-image_holder">
-              <img src="<%= bargain.image_url %>" alt="">
-            </div>
           </a>
 
         </div>
